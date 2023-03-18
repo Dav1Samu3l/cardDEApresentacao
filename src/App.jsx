@@ -1,34 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React from 'react';
+import { FaFacebook, FaTwitter } from 'react-icons/fa';
+import './Profile.css';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function Profile() {
   return (
-    <div className="App">
+    <div className="profile-container">
+      <div className="profile-square">
+        <img className="profile-image" src="https://avatars.githubusercontent.com/u/106498376?s=400&u=8bdd0fb75e8ffc8f9fcedbc6befde2f966954dde&v=4" alt="Profile Picture" />
+      </div>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
+        <h1 className="profile-name">Davi Samuel</h1>
+      </div>
+      <div className="profile-icons">
+        <a href="https://facebook.com">
+          <FaFacebook className="profile-icon" />
         </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+        <a href="https://twitter.com" target='_blank'>
+          <FaTwitter className="profile-icon" />
         </a>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
-  )
+  );
 }
 
-export default App
+export default Profile;
